@@ -1,0 +1,116 @@
+<!--pages/demo-01/demo-01.wxml-->
+<text></text>
+<view>{{msg}}</view>
+<view>  {{num}}</view>
+<view> 是否伪娘{{isGirl}} </view>
+ <view>
+ <text>身高{{person.height}}</text>
+ <text>体重{{person.weight}}</text>
+ <text>{{person.age}}</text>
+     {{person.name}}
+ </view>
+ <!--在标签 的属性中使用 -->
+ <view data-num="{{num}}">
+     只定义属性
+ </view>
+ <!-- 使用bool类型充当属性 checken
+ 字符串和或括号之间不要存在空格
+ -->
+ <view>
+    <checkbox checken="{{isChenced}}"></checkbox>
+ </view>
+   
+   <!--
+   运算=> 表达式
+   1 可以在花括号中加入表达式  “语句”
+   2 指的是一些简单运算 数字运算字符串 拼接逻辑运算
+      1数字加载
+      2字符串拼接
+      3三元表达式
+   3语句
+    1复杂的代码段
+       1   if else
+       2   awitch
+       3   do while
+       4   for
+   -->
+   <view>
+       {{1+1}}
+   </view>
+   <view>
+       {{'1+1'}}
+   </view>
+   <view>
+     {{10%2===0 ? '偶数' : '奇数'}}
+   </view>
+   <!-- 
+   循环
+       1 微信：for="{{数组或对象}}"  wx:for-ite="循环项名称" wx:for="循环的名称"
+       2 wwx:key="唯一的值 用来提高列表渲染的性能"
+          1 wx:key 绑定普通的字符串的时，候那么这个字符串名称 肯定是 循环数组 中的
+          对象 唯一属性
+          2 wx:key="*this" 就表示你的数组 是一个普通的数组 *this表示是 循环
+          [1,2,3,4,5,33]
+          ["1"."222","addf"]
+
+       3 当出现 数组的嵌套循环的时候 尤其要注意 以下绑定的名称 不要重负
+            wx:for-item="item" wx:for-index="index"
+       4  默认情况下我们部 写
+        wx:for-item="index" wx:for-index="index"
+        小程序也会把循环项的名称 和索引的名称item  和 index 
+        只有一层循环的话(wx:for-item="item" wx:for-index="index") 可以省略
+    
+    对象循环
+       1 wx:for={{对象}} wx:for-item="对象值" wx:for-index="对象的属性"
+   -->
+   <view wx:for="{{list}}" wx:key="id">
+       索引：{{index}}
+       --
+       值：{{item.name}}
+   </view>
+
+   <view>
+    <text>对象循环</text>
+    <view wx:for="{{person}}" 
+    wx:for-item="value" 
+    wx:for-index="key" 
+    wx:key="age">
+    属性：{{key}}
+    值：{{value}}
+    </view>
+   </view>
+
+
+<!-- 
+1  条件渲染
+    1  wx:if="{{true或者false}}"
+    wx:if
+    wx:elif
+    wx:else
+    2 hidden
+         1    在标签上直接加入
+         2 hidden={{true}}
+-->
+
+<view>
+    <view>条件渲染 </view>
+    <view wx:if="{{true}}">显示 </view>
+    <view wx:if="{{fales}}">隐藏 </view>
+
+    11111
+    <view wx:if="{{false}}"> 1110 </view>
+    <view wx:elif="{{false}}">222  </view>
+    <view wx:else="{{false}}">显示3  </view>
+    
+    hidden
+     <view hidden="{{false}}">00</view>
+     <view hidden>隐藏00</view>
+</view>
+   
+
+
+
+  
+
+  
+

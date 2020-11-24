@@ -1,0 +1,19 @@
+<!-- 
+1  复制 selectable
+2  对文本内容进行解码decode     <text decode>开&emsp;&emsp;&emsp;始</text>
+
+-->
+<view>
+rrr
+<text>小程序less安装   vscode  下载插件  EasyLESS </text>
+<text class="selectable" selectable="{{true}}">11长按复</text>
+  <text decode>开&emsp;&emsp;&emsp;始</text>
+<!-- 
+image 图片标签
+src 指定要加载的图片
+-->
+<view class="image">
+<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605806424872&di=196c9fa9d876f4753b65fab8da2c03c3&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F22%2F59%2F19300001325156131228593878903.jpg" />
+</view>
+
+</view>

@@ -1,0 +1,26 @@
+<!--components/Taps/Tabs.wxml-->
+<view class="tabs">
+	<view class="tabs_title ">
+		<view
+		 class="{{item.isActive? 'active' : ''}}"
+		 wx:for="{{tabs}}"
+		 wx:key="id"
+		 bindtap="handleItemTap"
+		 data-index="{{index}}"
+		>
+			{{item.name}}
+
+		</view>
+	</view>
+	<view class="tabs_content">
+<!-- 		
+    slot标签其实就是 一个占位符插槽
+    等到父组件调用的时候再传递标签过来这些传递的标签就
+    会替换slot插槽的位置
+    -->
+    <slot></slot>
+	</view>
+	价格￥{{price}}
+
+</view>
+

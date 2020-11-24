@@ -1,0 +1,20 @@
+/* components/Taps/Tabs.wxss */
+.tabs{}
+.tabs_title{
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border:solid red 1px;
+    padding:30rpx;
+    font-size: 16px;
+}
+.active{
+    
+color:red;
+border-bottom:solid red 5px ;
+    line-height: 50rpx;
+   text-align: center;
+   border-radius: 4px ;
+
+}

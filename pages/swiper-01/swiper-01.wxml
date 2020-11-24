@@ -1,0 +1,21 @@
+<!--pages/swiper-01/swiper-01.wxml-->
+<view>
+     <swiper class="tp" autoplay indicator-dots circular indicator-active-color="red"  indicator-color="blue">
+          <swiper-item>
+         <image mode="widthFix" src="../../icontab/a1.png"/>
+          </swiper-item>
+            <swiper-item>
+         <image mode="widthFix" src="../../icontab/a1.png"/>
+          </swiper-item>
+            <swiper-item>
+          <image mode="widthFix" src="../../icontab/a1.png"/>
+          </swiper-item>
+      </swiper>
+      <navigator url="/pages/home/home">
+          111
+      </navigator>
+       <navigator open-type="switchTab" url="/pages/home/home">
+         2222
+      </navigator>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">用户信息</button>
+</view>

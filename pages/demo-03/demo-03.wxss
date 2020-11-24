@@ -1,0 +1,17 @@
+view {
+  width: 100%;
+  font-size: 40rpx;
+  color: red;
+  margin: 0 auto;
+}
+view text {
+  color: #000000;
+}
+view .selectable {
+  width: 100%;
+  border: solid red 1px;
+}
+.image {
+  width: 200px;
+  height: 200px;
+}
